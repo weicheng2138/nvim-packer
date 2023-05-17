@@ -76,12 +76,6 @@ You have to quit out of vim to activate it.
 - `Ctrl + d` and `Ctrl + u` a good way to jump through file content
 - `Shift + v` select whole line, `Shift + G` to the bottom
 - use `y` to yank
-- use `; + f` to open fuzzy finder (telescope), `s + f` to open file browser => use `S + n` to insert file
-- use `g + r` to rename a variable for every
-- use `Ctrl + j` to get hint detail of error or warning
-- use `S + k` to get the hint of variable
-- use `s + v` to open a new panel?
-- use `Ctrl + w` then `q` to close split nvim panel
 - use `Esc` to close the highlight after search (with `noh`)
 
 ### Insert a new line
@@ -135,12 +129,6 @@ comment packer for nvim
 ## Bufferline
 
 - use `t + e` to open a new tab, `S + t` to switch between them
-
-## Telescope
-
-- use `; + f` to open fuzzy finder (telescope)
-- use `s + f` to open file browser
-- use `S + n` to insert file
 
 ## NvimTree
 
