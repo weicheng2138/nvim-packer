@@ -16,7 +16,12 @@ nvim_tree.setup({
 			window_picker = {
 				enable = false,
 			},
+			quit_on_open = true,
 		},
 	},
 	filters = { dotfiles = false, custom = { "^.git$" } },
+	git = {
+		enable = true,
+		ignore = false,
+	},
 })
