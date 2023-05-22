@@ -9,14 +9,6 @@ vim.api.nvim_command([[
   autocmd ColorScheme * highlight DiagnosticVirtualTextWarn guifg=#FFC51C
 ]])
 
--- vim.api.nvim_command([[
---   autocmd ColorScheme * highlight DiagnosticVirtualTextInfo guifg=#FFC51C
--- ]])
---
--- vim.api.nvim_command([[
---   autocmd ColorScheme * highlight DiagnosticVirtualTextHint guifg=#FFC51C
--- ]])
-
 -- line numbers
 opt.relativenumber = true
 opt.number = true
@@ -56,5 +48,3 @@ opt.splitright = true
 opt.splitbelow = true
 
 opt.iskeyword:append("-") -- making "-" to be considered as part of the word
-
--- highlight.create("DiagnosticVirtualTextWarn", { guifg = "#ff0000", gui = "bold" }, false)
