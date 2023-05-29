@@ -136,6 +136,9 @@ return packer.startup(function(use)
 	-- github copilot
 	use("github/copilot.vim")
 
+	-- indent line
+	use("lukas-reineke/indent-blankline.nvim")
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if packer_bootstrap then

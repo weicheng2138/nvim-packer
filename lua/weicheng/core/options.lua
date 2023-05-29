@@ -47,4 +47,8 @@ opt.backspace = "indent,eol,start"
 opt.splitright = true
 opt.splitbelow = true
 
+-- use for indent-line
+opt.list = true
+opt.listchars:append("space:⋅")
+
 opt.iskeyword:append("-") -- making "-" to be considered as part of the word
