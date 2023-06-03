@@ -51,4 +51,8 @@ opt.splitbelow = true
 opt.list = true
 opt.listchars:append("space:⋅")
 
+-- spell checking built-in
+opt.spelllang = "en_us"
+opt.spell = true
+
 opt.iskeyword:append("-") -- making "-" to be considered as part of the word
