@@ -46,6 +46,8 @@ return packer.startup(function(use)
 
 	-- comment out plugins
 	use("numToStr/Comment.nvim")
+	-- comment with ts context for jsx commenting
+	use("JoosepAlviste/nvim-ts-context-commentstring")
 
 	-- file explore
 	use({
