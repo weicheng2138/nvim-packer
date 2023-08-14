@@ -1,18 +1,23 @@
 local saga_setup, saga = pcall(require, "lspsaga")
 if not saga_setup then
-  return
+	return
 end
 
 saga.setup({
-  -- keybinds for navigation in lspsaga window
-  scroll_preview = { scroll_down = "<C-f>", scroll_up = "<C-b>" },
-  -- use enter to open file with definition preview
-  definition = {
-    edit = "<CR>",
-  },
-  ui = {
-    colors = {
-      normal_bg = "#022746",
-    },
-  },
+	-- keybinds for navigation in lspsaga window
+	scroll_preview = { scroll_down = "<C-f>", scroll_up = "<C-b>" },
+	-- use enter to open file with definition preview
+	definition = {
+		edit = "<CR>",
+	},
+	ui = {
+		code_action = "",
+		colors = {
+			normal_bg = "#022746",
+		},
+	},
+	lightbulb = {
+		enabled = false,
+		sign = true,
+	},
 })
