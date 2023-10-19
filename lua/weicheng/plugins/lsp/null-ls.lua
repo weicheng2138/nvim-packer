@@ -19,6 +19,7 @@ null_ls.setup({
 		--  "formatting.prettier.with({disabled_filetypes = {}})" (see null-ls docs)
 		formatting.prettier.with({
 			extra_args = { "--single-quote" },
+      disabled_filetypes = { "python", "py" },
 		}), -- js/ts formatter
 		formatting.stylua, -- lua formatter
 		diagnostics.eslint_d.with({ -- js/ts linter
@@ -33,6 +34,9 @@ null_ls.setup({
 			end,
 		}),
 		null_ls.builtins.code_actions.gitsigns,
+		null_ls.builtins.diagnostics.mypy,
+		null_ls.builtins.diagnostics.ruff,
+		null_ls.builtins.formatting.black,
 	},
 	-- configure format on save
 	on_attach = function(current_client, bufnr)
