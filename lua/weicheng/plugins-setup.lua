@@ -89,9 +89,18 @@ return packer.startup(function(use)
 	use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
 	use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
 
-	-- formatting & linting
-	use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
-	use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
+	-- (null-ls is not maintaining any more) formatting & linting
+	-- use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
+	-- use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
+
+	-- formatter
+	use({
+		"stevearc/conform.nvim",
+		-- event = { "BufReadPre", "BufNewFile" },
+	})
+
+	-- linter
+	use("mfussenegger/nvim-lint")
 
 	-- treesitter configuration
 	use({

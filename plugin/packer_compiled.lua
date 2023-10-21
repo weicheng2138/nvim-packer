@@ -109,6 +109,11 @@ _G.packer_plugins = {
     path = "/Users/weicheng/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["conform.nvim"] = {
+    loaded = true,
+    path = "/Users/weicheng/.local/share/nvim/site/pack/packer/start/conform.nvim",
+    url = "https://github.com/stevearc/conform.nvim"
+  },
   ["copilot.vim"] = {
     loaded = true,
     path = "/Users/weicheng/.local/share/nvim/site/pack/packer/start/copilot.vim",
@@ -159,11 +164,6 @@ _G.packer_plugins = {
     path = "/Users/weicheng/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
     url = "https://github.com/williamboman/mason-lspconfig.nvim"
   },
-  ["mason-null-ls.nvim"] = {
-    loaded = true,
-    path = "/Users/weicheng/.local/share/nvim/site/pack/packer/start/mason-null-ls.nvim",
-    url = "https://github.com/jayp0521/mason-null-ls.nvim"
-  },
   ["mason.nvim"] = {
     loaded = true,
     path = "/Users/weicheng/.local/share/nvim/site/pack/packer/start/mason.nvim",
@@ -173,11 +173,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/weicheng/.local/share/nvim/site/pack/packer/start/nightfly",
     url = "https://github.com/bluz71/vim-nightfly-colors"
-  },
-  ["null-ls.nvim"] = {
-    loaded = true,
-    path = "/Users/weicheng/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
-    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -193,6 +188,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/weicheng/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
     url = "https://github.com/norcalli/nvim-colorizer.lua"
+  },
+  ["nvim-lint"] = {
+    loaded = true,
+    path = "/Users/weicheng/.local/share/nvim/site/pack/packer/start/nvim-lint",
+    url = "https://github.com/mfussenegger/nvim-lint"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
