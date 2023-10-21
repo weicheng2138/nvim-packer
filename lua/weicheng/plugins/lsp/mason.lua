@@ -58,7 +58,7 @@ mason_null_ls.setup({
 
 		-- list of python servers to install
 		"pyright",
-		"mypy",
+		-- "mypy",
 		"ruff",
 		"black",
 	},
