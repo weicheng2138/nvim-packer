@@ -2,29 +2,9 @@
 
 My personal neovim configuration.
 
-### Combinations
+⚠️ I have changed the formatter and linter from null-ls to comform and nvim-lint due to that null-ls is not going to maintain anymore.
 
-- you can use motion with <line numbers> and `j` and `k` to do mutiple line motions
-- line numbers with `j` and `k` to move without commbo hitting.
-- `<CR>` as Enter, `<C - a>` as Ctrl + a
-- `<I>` and `<A>` to insert the the head and back of the line.
-- `<D>` delete the rest of the line from the current position.
-- `<C>` delete the rest of the line and enter insert mode
-- `<C - n>` and `<C - p>` is the move next and previous.
-- `<C - hjkl>` to move between panels
-- `<C - w>` to create window and use `s` or `v` to get horizontally and vertically panels.
-- `S` or `cc` to delete whole line and enter insert mode.
-- `O` to insert new line above, `o` insert new line below.
-- `<C - o>` or `<C - i>` to switch between preview or next buffer.
-
-- `u` to undo, `<C - r>` to redo
-- `yy` to copy whole line, `p` to paste, `P` to paste above
-- `dd` to cut down a line; `[i]dd` with multiple lines
-- `v` to get into visual mode, `d` to cut, `y` to copy, `V` to select whole line
-- `G` to the bottom of the file, `gg` to the top of it
-- `$` to the line tail, `0` to the head of the line
-
-### Tips
+## Tips
 
 - When you do the remap, it always give you some time (a little lagging time to do the combination of key) to execute the new mapping key and do the default movement. So do it with some special key like `<C> or <leader>`
 - You can source the `.vimrc` file with `:so %` or remap it with `nnoremap <leader><CR> :so ~/.config/nvim/init.vim<CR>`
