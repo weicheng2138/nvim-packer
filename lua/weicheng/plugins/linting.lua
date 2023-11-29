@@ -17,15 +17,36 @@ lint.linters_by_ft = {
 local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
 
 -- the moment you lint it, such as saving, inserting and entering a buffer.
-vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
+vim.api.nvim_create_autocmd({ "bufenter", "bufwritepost", "insertleave" }, {
 	group = lint_augroup,
 	callback = function()
-		-- do the linting
-		lint.try_lint()
+		-- check if eslint config exists
+		local eslint = vim.fs.find(
+			{ ".eslintrc.js", ".eslintrc.json", ".eslintrc", ".eslintrc.cjs", ".eslintrc.yaml", ".eslintrc.yml" },
+			{
+				upward = true,
+				path = vim.fs.dirname(vim.api.nvim_buf_get_name(0)),
+			}
+		)
+		if eslint[1] ~= nil then
+			-- do the linting
+			lint.try_lint()
+		end
 	end,
 })
 
 -- mannually trigger linting
 vim.keymap.set("n", "<leader>l", function()
-	lint.try_lint()
-end, { desc = "Trigger linting for current file" })
+	-- check if eslint config exists
+	local eslint = vim.fs.find(
+		{ ".eslintrc.js", ".eslintrc.json", ".eslintrc", ".eslintrc.cjs", ".eslintrc.yaml", ".eslintrc.yml" },
+		{
+			upward = true,
+			path = vim.fs.dirname(vim.api.nvim_buf_get_name(0)),
+		}
+	)
+	if eslint[1] ~= nil then
+		-- do the linting
+		lint.try_lint()
+	end
+end, { desc = "trigger linting for current file" })
