@@ -43,18 +43,18 @@ mason_lspconfig.setup_handlers({
 	function(server_name)
 		local server_config = {}
 		if server_name == "tsserver" then
-			server_config.init_options = {
-				plugins = {
-					{
-						name = "@vue/typescript-plugin",
-						location = "/Users/weicheng/.local/share/nvim/mason/bin/vue-language-server",
-						languages = { "vue" },
-					},
-				},
-			}
+			-- server_config.init_options = {
+			-- 	plugins = {
+			-- 		{
+			-- 			name = "@vue/typescript-plugin",
+			-- 			location = "/Users/weicheng/.local/share/nvim/mason/bin/vue-language-server",
+			-- 			languages = { "vue" },
+			-- 		},
+			-- 	},
+			-- }
 		end
 		if server_name == "volar" then
-			-- server_config.filetypes = { "vue", "typescript", "javascript" }
+			server_config.filetypes = { "vue" }
 			server_config.init_options = {
 				vue = {
 					hybridMode = false,
@@ -64,6 +64,7 @@ mason_lspconfig.setup_handlers({
 				-- },
 			}
 		end
+		-- print(server_name)
 		lspconfig[server_name].setup(server_config)
 	end,
 })
