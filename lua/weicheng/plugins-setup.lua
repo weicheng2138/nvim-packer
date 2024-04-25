@@ -61,10 +61,14 @@ return packer.startup(function(use)
 	use("nvim-lualine/lualine.nvim")
 
 	-- fuzzy finder
+	-- use({
+	-- 	"nvim-telescope/telescope-fzf-native.nvim",
+	-- 	run = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
+	-- })
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 	use({
 		"nvim-telescope/telescope.nvim",
-		tag = "0.1.1",
+		tag = "0.1.6",
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 
@@ -88,6 +92,7 @@ return packer.startup(function(use)
 	use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
 	use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
 	use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
+	use("pmizio/typescript-tools.nvim")
 
 	-- (null-ls is not maintaining any more) formatting & linting
 	-- use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
@@ -101,6 +106,16 @@ return packer.startup(function(use)
 
 	-- linter
 	use("mfussenegger/nvim-lint")
+
+	-- ts error formatter
+	use("davidosomething/format-ts-errors.nvim")
+	-- use({ "OlegGulevskyy/better-ts-errors.nvim", requires = "MunifTanjim/nui.nvim" })
+	-- use({
+	-- 	"Fildo7525/pretty_hover",
+	-- 	config = function()
+	-- 		require("pretty_hover").setup({})
+	-- 	end,
+	-- })
 
 	-- treesitter configuration
 	use({
